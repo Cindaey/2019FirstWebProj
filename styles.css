@@ -1,0 +1,369 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+html{
+    font-family: 'Jost', sans-serif;
+    background-image: url(images/pexels-henry-&-co-2341290.png);
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-position: left;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size:cover;
+}
+
+/*SMALL SCREEN*/
+
+h1{
+    font-family: 'Spirax', sans-serif;
+    padding:2rem 0rem 1rem 0rem;
+    font-size:1.9rem;
+}
+h2{ font-family: 'Spirax', sans-serif;
+    text-align: center;
+    letter-spacing: 0.06rem;
+}
+.tulips{
+    max-width:100%;
+    display: block;
+    margin: 0rem auto;
+}
+p{
+    font-weight: 300;
+    text-align: left;
+    margin: 0 auto;
+    max-width: 40rem;
+    letter-spacing: 0.03rem;
+    padding-bottom: .5rem;
+}
+li{
+    font-weight: 300;
+    list-style: none;
+}
+ul{padding-bottom: .5rem;}
+body{
+    animation: fadeInAnimation ease 2.5s; 
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards;
+    color:#5B270B;
+    max-width: 50rem;
+    margin: 0 auto;
+     z-index: 1;
+}
+@keyframes fadeInAnimation { 
+    0% { 
+        opacity: 0; 
+    } 
+    100% { 
+        opacity: 1; 
+    } }
+
+#logo{
+    display: block;
+    max-width: 200px;   
+}
+.icon1, .icon2, .icon3{
+    padding:0.5rem 0.5rem 0rem 0.5rem; 
+}
+
+#content{
+    padding: 0rem 1.3rem;
+    z-index: 1;
+    margin-bottom:3rem;
+}
+footer{
+    border-top: 1px solid #5B270B;
+    padding:0rem 1.5rem 2rem 1rem;
+}
+#contact{
+    margin:2rem 0rem 2rem 1rem;
+}
+#contact h2{font-size:1.3rem;}
+#contact h2, #contact li{
+    text-align: left;
+    margin: 0 auto;
+    max-width: 40rem;
+}
+
+header{
+    top: 0;
+    z-index: 999;
+    height:auto;
+    background-size:cover;
+    margin:0 auto;
+    border-bottom: 1px solid #5B270B;
+}
+.drawer{
+    height: 100vh;
+    width: 100%;
+    z-index: 5000;
+    top: 0;
+    right: -70rem;
+    overflow-x: hidden;
+    padding-top: 3.5rem;
+    position: fixed;
+    transition: right 1s;
+    list-style-type: none;
+    border-radius: 0.6rem;
+    clear: both;
+    background-image: url(images/pexels-henry-&-co-2341290.png);
+    background-position: left;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size:cover;
+        
+}
+.menu{
+    top:0;
+    float: right;
+    font-size: 1rem;
+    padding: .625rem;
+    margin: 1rem 1rem 1.2rem 0.5rem;
+    z-index: 5000;
+    cursor: pointer;
+    color:#5B270B;
+    background-color: transparent;
+    border: 1px solid #5B270B;
+    box-sizing: border-box;
+} 
+.closeBtn {
+    position: absolute;
+    top: 0;
+    border: 1px solid #5B270B;
+    background-color: transparent;
+    right: .625rem;
+    padding:.625rem;
+    font-size: 1rem;
+    margin:1rem 0rem 2rem 0rem;
+    color:#5B270B;  
+}
+    nav li{
+        background: none;
+        border: none;
+        color: #5B270B;
+        cursor: pointer;
+        margin: 3rem 0rem;
+        text-align: center;
+    }
+li a:focus{
+        outline: transparent;}
+nav li a{
+    text-decoration: none;
+    display: block;
+    color: #5B270B;
+    cursor: pointer;
+    clear: both;
+    }
+nav li a span{
+    display: block;
+    margin:0;
+    padding:0.5rem 1.5rem;
+    clear: both;
+}
+
+/*HOVER FORCUS ACTIVE STYLING*/
+#logo:hover, #logo:focus, .menu:hover, .closeBtn:hover, .menu:focus, .closeBtn:focus {
+    outline:none;
+    filter: drop-shadow(3px 3px 0px #E6BFAD);
+    max-width: 200px;  
+}
+.icon1:hover, .icon2:hover, .icon3:hover, .icon1:focus, .icon2:focus, .icon3:focus{
+    outline:none;
+    border: 1px solid #5B270B;
+}
+nav li a::before, li a::after{
+    content:"";
+    width: 0;
+    height: 1px;
+    position: absolute;
+    transition: all 0.2s linear;
+    background-color: #5b270b;
+}
+    nav li a:hover::before, nav li a:hover::after, nav li a:focus::before, nav li a:focus::after{
+    width: 50%;
+}
+nav li a::before{
+    left: 50%;
+    transition-duration: 0.4s;
+}
+nav li a::after{
+    left: 50%;
+    transition-duration: 0.4s;
+}
+nav li a span::before{
+    left: 0;
+    transition-duration: 0.4s;
+}
+nav li a span::after{
+    right: 0;
+    transition-duration: 0.4s;
+}
+nav li a:hover::before, nav li a:hover::after, nav li a:focus::before, nav li a:focus::after{
+    left: 25%;
+}
+[aria-current]:not([aria-current="false"]) span{
+    border-left: 1px solid #77320D;
+    border-right: 1px solid #77320D;
+    border-image-slice: 1;
+    width:50%;
+    margin: auto;
+    height:2.5rem;  
+
+}
+/*SKIP CONTENT*/
+ a.skip-main {
+    position:absolute;
+    top:-200px;
+    overflow:hidden;
+    color:#5B270B;
+    background-color: transparent;
+    z-index:999;
+}
+a.skip-main:focus, a.skip-main:active {
+    outline: none;
+    text-decoration:none;
+    transition: 0.5s;
+    top: 10px;
+    width: 10rem;
+    right:4rem;
+    height: auto;
+    overflow:auto;
+    padding:5px;
+    border:1px solid #5B270B;
+    text-align:center;
+}
+#icon{
+    display: grid;
+    grid-template-columns: 70px 70px 70px;
+    grid-template-rows: 1fr;
+    grid-column-gap: 1rem;
+}
+.icon2{
+    grid-column: 2/3;
+}
+.icon3{
+    grid-column: 3/4;
+}
+/*MEDIA QUERRIES*/
+@media only screen and (min-width:803px){
+    header{
+        max-width:100%;
+        display:grid;
+        grid-template-columns: 1fr 5fr;
+        align-items: center;
+        grid-column-gap: 3rem;
+        
+    }
+    .tulips, .carousel .carousel-inner {
+        max-width: 45rem;
+    }
+    body{max-width: 80rem;}
+    #contact{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 0.5rem;
+        padding-left:3rem;
+    }
+    .menu, .closeBtn {
+        display: none;
+        border: none;
+    }
+    .logo{
+        left:0;
+        
+    }
+    
+    nav li{
+        padding:0rem;
+        margin: 1rem 0.3rem;
+        
+        position: relative;
+    }
+    [aria-current]:not([aria-current="false"]) span{
+        margin:0rem;
+        width:100%;
+    }
+     .drawer{
+        max-width: 30rem;
+        height:6rem;
+        left: 0 !important;
+        display:flex;
+        position: static;
+        text-align: center;
+        align-items: flex-end;
+        box-shadow: none;
+        z-index: 8000;
+        float: right;
+        padding-top: 0rem;
+        background: none;
+    }
+    nav li a:hover::before, nav li a:hover::after, nav li a:focus::before, nav li a:focus::after{
+    width: 100%;
+}
+    nav li a:hover::before, nav li a:hover::after, nav li a:focus::before, nav li a:focus::after{
+    left: 0;
+}
+}
+@media only screen and (min-width:500px){
+    p, li{
+        font-size:1.1rem;
+        line-height: 1.5rem;
+    }
+    h1{
+        padding:2rem 0rem 1.4rem 0rem;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+}
+@media only screen and (min-width:700px){
+    h1{ letter-spacing:0.09rem;}}
+    .logo{
+        max-width: 250px;
+    }
+@media only screen and (min-width:803px) and (max-width:850px){
+nav li{
+    font-size:1rem;
+    margin:0;
+}
+}
+@media only screen and (min-width:850px){
+    .drawer{
+        max-width: 35rem;}}
+    .logo{
+        margin-left: 1rem;
+    }
+@media only screen and (min-width:1000px){
+    #contact h2{
+        font-size: 1.5rem;
+    }
+}
+@media only screen and (min-width:1066px){
+    p, li{
+        font-size:1.2rem;
+        line-height: 1.6rem;
+    }
+        
+    h1{
+        font-size:2.3rem;
+        padding:3rem 0rem 1.4rem 0rem;
+        letter-spacing:0.15rem;
+    }
+    h2{
+        font-size:1.7rem;
+        margin-bottom: 0.5rem;
+        
+    }
+}
+@media only screen and (min-width:1339px){
+    h1{
+        text-align: center;
+    }}

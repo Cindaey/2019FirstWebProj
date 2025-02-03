@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Mulberry Street Floristry</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Spirax&display=swap" rel="stylesheet">
+            <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+    </head>
+    <body>
+        
+        <header>
+        <a class="skip-main" href="#content">Skip to main content</a>
+            <button onfocus="openNav()" onclick="openNav()" class="menu">&#9776;</button>
+                  
+            <div id="logo"><a href="index.html" style="outline: none;"><img class="logo" src="images/logo.png" alt="Mulberry Street Floristry Logo"></a></div><!--<h1 class= "store" style="vertical-align:middle;">Mulberry Street Floristry</h1> vertical align center-->
+            <nav class="main-navs">
+                <ul class="drawer" id="theDrawer" >
+                    <li><button aria-label="Close" class="closeBtn" id="closeBtn" onfocus="openNav()" onclick="closeNav()"><span>&times;</span></button></li>
+                    <li><a href="index.html" aria-current="false" onfocus="openNav()"><span>Home</span></a></li>
+                    <li><a href="flower.html" aria-current="false" onfocus="openNav()"><span>Flower Collections</span></a></li>
+                    <li><a href="bouquet.html" aria-current="page" onfocus="openNav()" onblur="closeNav()"><span>Bouquet Collections</span></a></li>
+            </ul>
+            </nav>
+          
+               
+        </header>
+            <div id="content">
+            <h1>Bouquet Collections</h1>
+                <p>Bouquet arrangements has yet to be published</p>
+           </div>
+        <footer>
+           
+            <div id="contact">
+                <div class="contact">
+                <h2>Location and Address</h2>
+                <ul>
+                    <li>Address: 234 Mulberry Street NY, NY 10013</li>
+                    <li>Email: MSFloristry@gmail.com</li>
+                    <li>Phone Number: (917)-123-1234</li>
+                </ul></div>
+                <div class="hours">
+                <h2>Store Hours</h2>
+                <ul id="Hours">
+                    <li>Monday-Friday: 8:00am- 7:00pm</li>
+                    <li>Saturday-Sunday: 8:00am- 5:00pm</li>
+                </ul></div>
+                <div class="follow">
+                    <h2>Follow Us:</h2>
+                    <div id="icon">
+                        <a href="#" class="icon1">
+                            <img src="images/iconfinder_Colored_Facebook3_svg_5365678.svg" alt="Facebook icon"></a>
+                        <a href="#" class="icon2" >
+                    <img src="images/iconfinder_1_Instagram_colored_svg_1_5296765.svg" alt="Instagram icon"></a>
+                        <a href="#" class="icon3">
+                            <img src="images/iconfinder_1_Twitter3_colored_svg_5296516.svg" alt="Twitter icon"></a></div>
+                </div></div>
+             <p style="text-align: center;">&#169; Mulberry Street Floristry All Rights Reserved</p>
+        </footer>
+    </body>
+</html>

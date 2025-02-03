@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Mulberry Street Floristry</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="slide.css">
+        <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Spirax&display=swap" rel="stylesheet">
+            <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+        <style>
+            #text1{
+                margin-bottom:1rem;
+            }
+            #text2{
+                margin-top:1rem;
+            }
+            @media only screen and (min-width:1150px){
+           
+                .tulips, .carousel .carousel-inner{max-width:50rem;}
+                p{max-width: 45rem;}
+            }
+            @media only screen and (min-width:1339px){
+                .text1, text2{
+                    float:right;
+                    display: block;
+                }
+                p{
+                max-width: 35rem;
+                }
+                .tulips, .carousel .carousel-inner{max-width:40rem;}
+                #wrap{
+                    
+                    display: grid;
+                    grid-template-columns:40rem 40rem;
+                    grid-template-rows:auto;
+                }
+                #text1{
+                    grid-column: 2/3;
+                }
+                #img{
+                    grid-column: 1/2;
+                    grid-row: 1/2;
+                }
+            }
+            /*SLIDE*/   
+        </style>
+    </head>
+    <body>
+        
+        <header>
+        <a class="skip-main" href="#content">Skip to main content</a>
+                <button onfocus="openNav()" onclick="openNav()" class="menu">&#9776;</button>
+                  
+            <div id="logo" tabindex="0"><a href="index.html" style="outline: none;"><img class="logo" src="images/logo.png" alt="Mulberry Street Floristry Logo"></a></div><!--<h1 class= "store" style="vertical-align:middle;">Mulberry Street Floristry</h1> vertical align center-->
+            <nav class="main-navs">
+                <ul class="drawer" id="theDrawer" >
+                    <li><button aria-label="Close" class="closeBtn" id="closeBtn" onfocus="openNav()" onclick="closeNav()"><span>&times;</span></button></li>
+                    <li><a href="index.html" aria-current="page" onfocus="openNav()"><span>Home</span></a></li>
+                    <li><a href="flower.html" aria-current="false" onfocus="openNav()"><span>Flower Collections</span></a></li>
+                    <li><a href="bouquet.html" aria-current="false" onfocus="openNav()" onblur="closeNav()"><span>Bouquet Collections</span></a></li>
+            </ul>
+            </nav>
+          
+        </header>
+            <div id="content">
+                <h1>About Us</h1>
+                <div id="wrap">
+    
+                 <div id="text1">
+                <h2>Introduction</h2>
+                <p>Mulberry Street Floristry is a family own flower shop business that’s located in the heart of Chinatown Manhattan for 30 years. Our store offers a wide array of flowers and bouquets that are suited for multiple occasions including weddings, holidays, anniversaries, graduations, etc.
+                         </p></div>
+                     <div id="img">
+                <img class="tulips" src="images/pexels-johnmark-smith-343957.png" alt="Mulberry Street Floristry store front with baskets of roses in yellow, coral, pink, orange color"></div>
+                    <div id="text2">
+                <h2>Our Products</h2>
+                <p>Our remarkably fresh products is a result of our support for farms and gardens local to the state of New York. The two business partners we are currently partnered with are Hudson River Rose Garden and Ethan's Flower Field. Hudson River Rose Garden is a magificent garden located in Greene County. As the name suggested, the garder is famous for their rose varieties. Over the years, the owner of Hudson River Rose Garden, Janice Alsteen provided a large variety of roses in different colors to our store, which includes Sugar Moon (white), Princess Charlene de Monaco (coral/pink), Deep Secret (red), Sunny Sky (yellow), Mme Violet (purple), Seventh Heaven (orange), etc. Ethan's Flower Field is another one of our business partner who provided us with a variety of flowers which includes sunflowers, peonies, tulips, lilies, and many other flowers.</p>
+                     </div>   
+
+                <div id="myCarousel"
+         class="carousel"
+         aria-roledescription="carousel"
+         aria-label="Collection of Flowers">
+  <div class="carousel-inner">
+    <div class="controls">
+      <button class="rotation pause" aria-label="Stop automatic slide show">
+        <svg width="42"
+             height="34"
+             version="1.1"
+             xmlns="http://www.w3.org/2000/svg">
+          <rect class="background"
+                x="2"
+                y="2"
+                rx="5"
+                ry="5"
+                width="38"
+                height="24"></rect>
+          <rect class="border"
+                x="4"
+                y="4"
+                rx="5"
+                ry="5"
+                width="34"
+                height="20"></rect>
+          <polygon class="pause" points="17 8 17 20"></polygon>
+          <polygon class="pause" points="24 8 24 20"></polygon>
+          <polygon class="play" points="15 8 15 20 27 14"></polygon>
+        </svg>
+      </button>
+      <button class="previous"
+              aria-controls="myCarousel-items"
+              aria-label="Previous Slide">
+        <svg width="42"
+             height="34"
+             version="1.1"
+             xmlns="http://www.w3.org/2000/svg">
+          <rect class="background"
+                x="2"
+                y="2"
+                rx="5"
+                ry="5"
+                width="38"
+                height="24"></rect>
+          <rect class="border"
+                x="4"
+                y="4"
+                rx="5"
+                ry="5"
+                width="34"
+                height="20"></rect>
+          <polygon points="9 14 21 8 21 11 33 11 33 17 21 17 21 20"></polygon>
+        </svg>
+      </button>
+      <button class="next"
+              aria-controls="myCarousel-items"
+              aria-label="Next Slide">
+        <svg width="42"
+             height="34"
+             version="1.1"
+             xmlns="http://www.w3.org/2000/svg">
+          <rect class="background"
+                x="2"
+                y="2"
+                rx="5"
+                ry="5"
+                width="38"
+                height="24"></rect>
+          <rect class="border"
+                x="4"
+                y="4"
+                rx="5"
+                ry="5"
+                width="34"
+                height="20"></rect>
+          <polygon points="9 11 21 11 21 8 33 14 21 20 21 17 9 17"></polygon>
+        </svg>
+      </button>
+    </div>
+    <div id="myCarousel-items"
+         class="carousel-items"
+         aria-live="off">
+      <div class="carousel-item active"
+           role="group"
+           aria-roledescription="slide"
+           aria-label="1 of 6">
+        <div class="carousel-image">
+          <a href="#">
+            <img src="rose-images/Artboard%201%20copy.png" alt="Deep Secret, red rose">
+          </a>
+        </div>
+        <div class="carousel-caption">
+          <h3>
+            <a href="#" id="carousel-label-1">
+              Deep Secret
+            </a>
+          </h3>
+        </div>
+        <!-- .carousel-caption -->
+        </div></div>
+      <!-- .item -->
+      <div class="carousel-item"
+           role="group"
+           aria-roledescription="slide"
+           aria-label="2 of 6">
+        <div class="carousel-image">
+          <a href="#">
+            <img src="rose-images/Artboard%201%20copy%202.png" alt="Mme Violet, purple rose">
+          </a>
+        </div>
+        <div class="carousel-caption">
+          <h3>
+            <a href="#" id="carousel-label-2">
+              Mme Violet
+            </a>
+          </h3>
+        </div>
+        <!-- .carousel-caption -->
+      </div>
+      <!-- .item -->
+      <div class="carousel-item"
+           role="group"
+           aria-roledescription="slide"
+           aria-label="3 of 6">
+        <div class="carousel-image">
+          <a href="#">
+            <img src="rose-images/Artboard%201%20copy%203.png" alt="Seventh Heaven, orange rose">
+          </a>
+        </div>
+        <div class="carousel-caption">
+          <h3>
+            <a href="#" id="carousel-label-3">
+              Seventh Heaven
+            </a>
+            </h3></div></div>
+      <div class="carousel-item"
+           role="group"
+           aria-roledescription="slide"
+           aria-label="4 of 6">
+        <div class="carousel-image">
+          <a href="#">
+            <img src="rose-images/Artboard%201%20copy%204.png" alt="Sunny Sky, yellow rose">
+          </a>
+        </div>
+        <div class="carousel-caption">
+          <h3>
+            <a href="#" id="carousel-label-4">
+              Sunny Sky
+            </a>
+          </h3>
+        </div>
+        <!-- .carousel-caption -->
+      </div>
+      <div class="carousel-item"
+           role="group"
+           aria-roledescription="slide"
+           aria-label="5 of 9">
+        <div class="carousel-image">
+          <a href="#">
+            <img src="rose-images/Artboard%201.png" alt="Sugar Moon, White Rose">
+          </a>
+        </div>
+        <div class="carousel-caption">
+          <h3>
+            <a href="#" id="carousel-label-5">
+                Sugar Moon
+            </a>
+          </h3>
+        </div>
+        <!-- .carousel-caption -->
+      </div>
+      <!-- .item -->
+      <div class="carousel-item"
+           role="group"
+           aria-roledescription="slide"
+           aria-label="6 of 9">
+        <div class="carousel-image">
+          <a href="#">
+            <img src="rose-images/Artboard%201%20copy%205.png" alt="Princess Charlene de Monaco, light pink rose">
+          </a>
+        </div>
+        <div class="carousel-caption">
+          <h3>
+            <a href="#" id="carousel-label-6">
+             Princess Charlene de Monaco
+            </a>
+          </h3>
+        </div>
+        <!-- .carousel-caption -->
+      </div>
+      <div class="carousel-item"
+           role="group"
+           aria-roledescription="slide"
+           aria-label="7 of 9">
+        <div class="carousel-image">
+          <a href="#">
+            <img src="rose-images/Artboard%201%20copy%206.png" alt="Jules Elie, pinkish purple peony">
+          </a>
+        </div>
+        <div class="carousel-caption">
+          <h3>
+            <a href="#" id="carousel-label-7">
+              Jules Elie Peony
+            </a>
+          </h3>
+        </div>
+        <!-- .carousel-caption -->
+      </div>
+      <div class="carousel-item"
+           role="group"
+           aria-roledescription="slide"
+           aria-label="8 of 9">
+        <div class="carousel-image">
+          <a href="#">
+            <img src="rose-images/Artboard%201%20copy%208.png" alt="Assorted Tulip Field consisting of red, yellow, and white tulips">
+          </a>
+        </div>
+        <div class="carousel-caption">
+          <h3>
+            <a href="#" id="carousel-label-8">
+              Ethan's Flower Field: Tulip Area
+            </a>
+          </h3>
+        </div>
+        <!-- .carousel-caption -->
+      </div>
+      <div class="carousel-item"
+           role="group"
+           aria-roledescription="slide"
+           aria-label="9 of 9">
+        <div class="carousel-image">
+          <a href="#">
+            <img src="rose-images/Artboard%201%20copy%207.png" alt="Sunflower">
+          </a>
+        </div>
+        <div class="carousel-caption">
+          <h3>
+            <a href="#" id="carousel-label-9">
+              Sunflower
+            </a>
+          </h3>
+        </div>
+        <!-- .carousel-caption -->
+      </div>
+      <!-- .item -->
+  </div></div>                        
+          </div>
+                </div>
+        <script src="slide.js"></script>
+        <footer>
+           
+            <div id="contact">
+                <div class="contact">
+                <h2>Location and Address</h2>
+                <ul>
+                    <li>Address: 234 Mulberry Street NY, NY 10013</li>
+                    <li>Email: MSFloristry@gmail.com</li>
+                    <li>Phone Number: (917)-123-1234</li>
+                </ul></div>
+                <div class="hours">
+                <h2>Store Hours</h2>
+                <ul id="Hours">
+                    <li>Monday-Friday: 8:00am- 7:00pm</li>
+                    <li>Saturday-Sunday: 8:00am- 5:00pm</li>
+                </ul></div>
+                <div class="follow">
+                    <h2>Follow Us:</h2>
+                    <div id="icon">
+                        <a href="#" class="icon1">
+                            <img src="images/iconfinder_Colored_Facebook3_svg_5365678.svg" alt="Facebook icon"></a>
+                        <a href="#" class="icon2" >
+                    <img src="images/iconfinder_1_Instagram_colored_svg_1_5296765.svg" alt="Instagram icon"></a>
+                        <a href="#" class="icon3">
+                            <img src="images/iconfinder_1_Twitter3_colored_svg_5296516.svg" alt="Twitter icon"></a></div>
+                </div></div>
+             <p style="text-align: center;">&#169; Mulberry Street Floristry All Rights Reserved</p>
+        </footer>
+    </body>
+</html>
